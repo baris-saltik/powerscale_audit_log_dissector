@@ -1,0 +1,12 @@
+
+# NFS Export created successfully
+[0: Fri Jul 12 12:13:41 2024] {"id":"2d1ac32f-4048-11ef-919c-000c297aba6e","timestamp":1720786421098775,"payload":{"user":{"token": {"UID":0, "GID":0, "SID": "SID:S-1-22-1-0", "GSID": "SID:S-1-22-2-0", "GROUPS": ["SID:S-1-5-11", "GID:5", "GID:10", "GID:20", "GID:70"], "protocol": 17, "zone id": 1, "client": "192.168.54.1", "local": "192.168.54.201" }},"uri":"/protocols/nfs/exports","method":"POST","args":{"zone":"zone1"},"body":{"paths":["/ifs/data/zone1/nfs/export1"]}}}
+[1: Fri Jul 12 12:13:42 2024] {"id":"2d1ac32f-4048-11ef-919c-000c297aba6e","timestamp":1720786422169263,"payload":{"status":201,"statusmsg":"Created","body":{"id":29}}}
+
+# NFS Export failed to create
+[8: Fri Jul 12 12:25:00 2024] {"id":"c1e93668-4049-11ef-919c-000c297aba6e","timestamp":1720787100369481,"payload":{"user":{"token": {"UID":0, "GID":0, "SID": "SID:S-1-22-1-0", "GSID": "SID:S-1-22-2-0", "GROUPS": ["SID:S-1-5-11", "GID:5", "GID:10", "GID:20", "GID:70"], "protocol": 17, "zone id": 1, "client": "192.168.54.1", "local": "192.168.54.201" }},"uri":"/protocols/nfs/exports","method":"POST","args":{"zone":"zone1"},"body":{"paths":["/ifs/data/zone1/nfs/export3"],"read_only_clients":["192.168.54.54"],"read_write_clients":["192.168.54.0/24"],"root_clients":["192.168.54.0/24"],"security_flavors":["unix","krb5"]}}}
+[9: Fri Jul 12 12:25:01 2024] {"id":"c1e93668-4049-11ef-919c-000c297aba6e","timestamp":1720787101664383,"payload":{"status":500,"statusmsg":"Internal Server Error","body":{"errors":[{"code":"AEC_EXCEPTION","message":"'/ifs/data/zone1/nfs/export3' failed translation to absolute path: No such file or directory"}]}}}
+
+
+
+
